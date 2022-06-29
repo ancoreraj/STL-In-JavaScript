@@ -12,16 +12,15 @@ class Queue {
         const item = this.elements[this.head];
         delete this.elements[this.head];
         this.head++;
-        // return item;
     }
     front() {
         return this.elements[this.head];
     }
-    length() {
+    size() {
         return this.tail - this.head;
     }
     empty() {
-        if(this.length() == 0) return true;
+        if(this.size() == 0) return true;
 
         return false;
     }
